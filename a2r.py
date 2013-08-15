@@ -67,6 +67,10 @@ if __name__=="__main__":
                 rtm.rtm.tasks.setDueDate(timeline = timeline, list_id = list_id, taskseries_id = taskseries_id, task_id = task_id, due = task.due_date.isoformat(), parse = "0")
             if task.importance != 4:
                 rtm.rtm.tasks.setPriority(timeline = timeline, list_id = list_id, taskseries_id = taskseries_id, task_id = task_id, priority = str(task.importance))
+            if task.description:
+                rtm.rtm.tasks.notes.add(timeline = timeline, list_id = list_id, taskseries_id = taskseries_id, task_id = task_id, note_title = 'Beskrivelse fra Astrid', note_text = task.description)
+            if task.comments:
+                rtm.rtm.tasks.notes.add(timeline = timeline, list_id = list_id, taskseries_id = taskseries_id, task_id = task_id, note_title = 'Log fra Astrid', note_text = task.comments)
             db.set_task_migrated(task)
             try:
                 print "Created task %s" % (task.title.encode("utf-8", "ignore"), )

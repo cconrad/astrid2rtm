@@ -8,7 +8,7 @@ class RtmList(object):
         self.deleted = bool(int(data["deleted"]))
         self.id = int(data["id"])
         self.locked = bool(int(data["locked"]))
-        self.name = data["name"].decode("utf-8")
+        self.name = data["name"]
         self.position = int(data["position"])
         self.smart = bool(int(data["smart"]))
         self.sort_order = int(data["sort_order"])

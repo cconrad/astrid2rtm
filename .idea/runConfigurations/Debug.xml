@@ -11,7 +11,7 @@
     <module name="astrid2rtm" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
     <option name="SCRIPT_NAME" value="$PROJECT_DIR$/a2r.py" />
-    <option name="PARAMETERS" value="C:\Users\Claus\Desktop\tasks.csv.txt" />
+    <option name="PARAMETERS" value="C:\Users\Claus\Desktop\tasks.csv" />
     <option name="MULTIPROCESS" value="true" />
     <RunnerSettings RunnerId="PyDebugRunner" />
     <RunnerSettings RunnerId="Run" />
